@@ -1,0 +1,313 @@
+/*
+	RESET!
+	http://meyerweb.com/eric/tools/css/reset/
+	v2.0 | 20110126
+	License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background-repeat: no-repeat;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+	color:#333;
+	font-size:62.5%; /* Makes calculating EMs easier but zooming the viewport is more chaotic. */
+}
+ol,
+ul {
+	list-style: none;
+}
+li li {
+	font-size:1em;
+}
+blockquote,
+q {
+	quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+strong,
+b {
+	font-weight:bold;
+}
+em,
+i {
+	font-style:italic;
+}
+label {
+	cursor:pointer;
+}
+input {
+	outline:none;
+}
+sup {
+	vertical-align:baseline;
+	position:relative;
+	top:-0.4em;
+	font-size: 85%;
+	padding:0 0.3em 0 0.1em;
+}
+
+/**
+ * CCTA
+ */
+
+/* Base Elements */
+body {
+
+}
+h1 {
+	font-size:2.8em;
+	line-height: 1.25;
+}
+h2 {
+	font-size:2.2em;
+	line-height: 1.25;
+	font-weight: bold;
+	margin-top:1.272727em;
+	margin-bottom: 0.63636363em;
+}
+h3 {
+	font-size:1.8em;
+	line-height: 1.25;
+	font-weight: bold;
+	margin-top: 1.55555em;
+	margin-bottom: 0.77777em;
+}
+h4 {
+	font-size:1.6em;
+	line-height: 1.25;
+	font-weight: bold;
+	margin-top:1.75em;
+	margin-bottom: 0.875em;
+}
+h5 {
+	font-size:1.6em;
+	line-height: 1.25;
+	margin-top:1.75em;
+	margin-bottom: 0.875em;
+}
+h6 {
+	font-size:1.4em;
+	line-height: 1.25;
+	margin-bottom: 1em;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+a {
+	text-decoration: none;
+	color:#2E7FB6;
+}
+a:hover,
+a:focus {
+	text-decoration: underline;
+}
+
+/* Helpers */
+.holder {
+	max-width: 104em;
+	margin:0 auto;
+}
+
+/* Header */
+header {
+	position: relative;
+	z-index: 20;
+}
+header .logo {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+header ul {
+	display:table;
+	width:100%;
+}
+header li {
+	display: table-cell;
+	font-size:1.4em;
+	text-transform: uppercase;
+	vertical-align: middle;
+	font-weight: bold;
+	letter-spacing: 0.08em;
+}
+header li:first-child {
+	width:10.85em;
+	visibility: hidden;
+}
+header li a {
+	display: block;
+	color:#fff;
+	text-align: center;
+	padding:1.5em;
+	background-color:#2E7FB6;
+}
+header li a:hover,
+header li a:focus {
+	background-color: #F04447;
+	text-decoration: none;
+}
+
+.featured-image {
+	position:relative;
+}
+.no-featured-image {
+	height:10em;
+}
+.featured-image img {
+	margin:0 auto;
+	display: block;
+}
+.page-title {
+	position: absolute;
+	bottom:0;
+	background-color:rgba(255, 255, 255, 0.65);
+	font-size:2.8em;
+	padding:1em;
+	left:14.5%;
+	min-width: 66.5%;
+	font-weight: bold;
+}
+
+main {
+	background-color:#eee;
+	padding:5em 0;
+}
+article {
+	padding:5em 3.5em;
+	background-color:#fff;
+	max-width:65%;
+	margin:0 auto;
+}
+article p {
+	font-size: 1.4em;
+	line-height: 1.45;
+	margin-bottom: 1em;
+	max-width: 36em;
+}
+article ul,
+article ol {
+	padding-left:1.5em;
+	list-style: disc;
+	margin-bottom: 1.4em;
+}
+article ol {
+	list-style: decimal;
+}
+article li {
+	font-size: 1.4em;
+	line-height: 1.45em;
+}
+article img {
+	margin-bottom:1.5em;
+}
+
+/* Media */
+.alignright {
+	float:right;
+	margin-left:1.5em;
+}
+.alignleft {
+	float:left;
+	margin-right:1.5em;
+}
+.aligncenter {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+.wp-caption-text {
+	color:#999;
+}
+
+/* Follow CCTA */
+.follow-ccta {
+	text-align: center;
+	padding:1em 0 3.5em;
+	background-color: #FEEC9A;
+}
+.follow-ccta h2 {
+	color:#F04447;
+}
+.follow-ccta a {
+	display: inline-block;
+	margin: 0 1em;
+}
+.icon {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	fill: currentColor;
+}
+.follow-ccta .twitter {
+	color:#55acee;
+}
+.follow-ccta .facebook {
+	color: #3b5998;
+}
+.follow-ccta .instagram {
+	color:#3f729b;
+}
+.follow-ccta .icon {
+	font-size:6em;
+}
+
+/* Footer */
+footer {
+	background-color: #F04447;
+	padding:5em 0;
+	overflow: auto;
+	height:100%;
+}
+footer p {
+	color:#fff;
+	font-size:1.2em;
+	line-height: 1.5;
+	float: left;
+	width:40%;
+	font-style: italic;
+}
+footer .ccta-address {
+	float:right;
+	text-align: right;
+	width:25%;
+}
+footer a {
+	color:#fff;
+	text-decoration: underline;
+}

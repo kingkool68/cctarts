@@ -286,11 +286,11 @@ article img {
 	margin-bottom:0.75em;
 }
 .program .description {
-	float:right;
+	float:left;
 	width:45%;
 }
 .program .information {
-	float:left;
+	float:right;
 	width:35%;
 }
 .program .details {

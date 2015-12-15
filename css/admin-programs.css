@@ -1,0 +1,14 @@
+.programs-half-width {
+	float:left;
+	width:45%;
+	margin-right:1em;
+}
+.programs-day-of-the-week {
+	clear:both;
+}
+.programs-day-of-the-week label {
+	display:block;
+}
+.programs-heading {
+	clear:left;
+}

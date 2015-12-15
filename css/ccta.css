@@ -166,6 +166,9 @@ header li {
 	font-weight: bold;
 	letter-spacing: 0.08em;
 }
+header li li {
+	font-size:1em;
+}
 header li:first-child {
 	width:10.85em;
 	visibility: hidden;
@@ -178,16 +181,39 @@ header li a {
 	background-color:#2E7FB6;
 }
 header li a:hover,
-header li a:focus {
+header li a:focus,
+header .sub-menu li a:hover,
+header .sub-menu li a:focus {
 	background-color: #F04447;
 	text-decoration: none;
 }
+header .sub-menu {
+	display:block;
+	position:absolute;
+	max-width:20em;
+	display: none;
+}
+header .has-children:hover .sub-menu,
+header .hover .sub-menu {
+	display: block;
+}
+header .sub-menu li {
+	display: block;
+}
+header .sub-menu li:first-child {
+	visibility: visible;
+	width:auto;
+}
+header .sub-menu li a {
+	background-color:#24638d;
+}
+
 
 .featured-image {
 	position:relative;
 }
 .no-featured-image {
-	height:10em;
+	height:10.3em;
 }
 .featured-image img {
 	margin:0 auto;
@@ -207,12 +233,14 @@ header li a:focus {
 main {
 	background-color:#eee;
 	padding:5em 0;
+	overflow:auto;
+	height:100%;
 }
 article {
 	padding:5em 3.5em;
 	background-color:#fff;
 	max-width:65%;
-	margin:0 auto;
+	margin:0 auto 3.5em;
 }
 article p {
 	font-size: 1.4em;
@@ -235,6 +263,36 @@ article li {
 }
 article img {
 	margin-bottom:1.5em;
+}
+
+/* Taxonomy Term */
+.term-description {
+	padding-top:1em;
+	padding-bottom:1em;
+	margin-top:-5em;
+	margin-bottom:7.5em;
+}
+.term-description p {
+	font-size: 2em;
+    font-style: italic;
+}
+
+/* Programs */
+.program .details {
+	padding-left:0;
+}
+.program .details li {
+	list-style: none;
+}
+.program .register {
+	display: inline-block;
+	margin: 0 auto;
+	padding: 1em 2em;
+	color: #333;
+	background-color: #FEDA31;
+	font-size: 1.6em;
+	font-weight: 700;
+	text-align: center;
 }
 
 /* Media */

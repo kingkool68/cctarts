@@ -278,6 +278,21 @@ article img {
 }
 
 /* Programs */
+.program {
+	overflow: auto;
+	height: 100%;
+}
+.program .heading {
+	margin-bottom:0.75em;
+}
+.program .description {
+	float:right;
+	width:45%;
+}
+.program .information {
+	float:left;
+	width:35%;
+}
 .program .details {
 	padding-left:0;
 }

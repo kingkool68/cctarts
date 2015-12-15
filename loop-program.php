@@ -3,7 +3,11 @@
 	<?php if( is_archive() ) { ?>
 		<h1 class="heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 	<?php } ?>
-	<?php the_content(); ?>
+	<div class="description">
+		<?php the_content(); ?>
+	</div>
 
-	<?php echo get_ccta_program_details(); ?>
+	<div class="information">
+		<?php echo get_ccta_program_details(); ?>
+	</div>
 </article>

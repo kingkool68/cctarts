@@ -14,9 +14,11 @@ jQuery(document).ready(function($) {
 	});
 
 	$('.has-children > a').on('click', function(e) {
-		e.preventDefault();
 		$this = $(this);
 		$('.has-children').not( $this.parent() ).removeClass('hover');
+		if( !$this.parent().is('.hover') ) {
+			e.preventDefault();
+		}
 		$this.parent().toggleClass('hover');
 	});
 

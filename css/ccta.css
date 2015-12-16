@@ -328,6 +328,35 @@ article img {
 	color:#999;
 }
 
+/* Button Shortcode */
+.ccta-button {
+	display:block;
+	background-color:#2E7FB6;
+	color:#fff;
+	text-transform: uppercase;
+	text-align: center;
+	font-size:1.4em;
+	font-weight: bold;
+	padding:1.5em;
+	max-width:20em;
+	margin:0 auto 1em;
+}
+.ccta-button-color-yellow {
+	background-color:#F1CF33;
+}
+.ccta-button-color-red {
+	background-color:#F04447;
+}
+.ccta-button-aligned-left {
+	margin-left:0;
+	margin-right:auto;
+}
+.ccta-button-aligned-right {
+	margin-left:auto;
+	margin-right:0;
+}
+
+
 /* Follow CCTA */
 .follow-ccta {
 	text-align: center;

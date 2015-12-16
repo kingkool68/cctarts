@@ -47,3 +47,4 @@ function ccta_svg_icon( $name = '' ) {
 
 include 'functions/programs.php';
 include 'functions/nav.php';
+include 'functions/shortcodes.php';

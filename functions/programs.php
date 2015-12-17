@@ -265,11 +265,23 @@ function get_ccta_program_details( $post_id = FALSE ) {
 
 	$day_of_the_week = '';
 	if( isset( $deets['day-of-the-week'] ) && is_array($deets['day-of-the-week']) ) {
-		foreach( $deets['day-of-the-week'] as $index => $day ) {
-			$day_of_the_week .= ucfirst($day) . 's ';
+		if( count( $deets['day-of-the-week'] ) == 5 ) {
+			$diff = array_diff( $deets['day-of-the-week'], array('monday', 'tuesday', 'wednesday', 'thursday', 'friday') );
+			if( empty( $diff ) ) {
+				$day_of_the_week = 'Monday - Friday';
+			}
+		} else {
+			foreach( $deets['day-of-the-week'] as $index => $day ) {
+				$deets['day-of-the-week'][ $index ] = ucfirst($day) . 's';
+			}
+			$seperator = ', ';
+			if( count( $deets['day-of-the-week'] ) == 2 ) {
+				$seperator = ' &amp; ';
+			}
+			$day_of_the_week = implode( $seperator, $deets['day-of-the-week'] );
 		}
 
-		$day_of_the_week = trim( $day_of_the_week ) . ', ';
+		$day_of_the_week = trim( $day_of_the_week );
 	}
 
 	$ages = '';
@@ -285,7 +297,7 @@ function get_ccta_program_details( $post_id = FALSE ) {
 		$ages = $min_age . '-' . $max_age;
 	}
 
-	$times = $day_of_the_week;
+	$times = '';
 	if( $start_time != $end_time ) {
 		$times .= $start_time . ' to ' . $end_time;
 	}
@@ -298,10 +310,13 @@ function get_ccta_program_details( $post_id = FALSE ) {
 		$li[] = 'Ages ' . $ages;
 	}
 
-	$li[] = $start_date . ' - ' . $end_date;
+	if( $day_of_the_week ) {
+		$li[] = $day_of_the_week;
+	}
 	if( $times ) {
 		$li[] = $times;
 	}
+	$li[] = $start_date . ' - ' . $end_date;
 
 	$output = '<ul class="details">';
 	$output .= '<li>' . implode( '</li><li>', $li ) . '</li>';

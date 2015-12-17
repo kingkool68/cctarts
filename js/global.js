@@ -30,4 +30,8 @@ jQuery(document).ready(function($) {
 	$('html').click(function() {
 		$('nav .has-children').removeClass('hover');
 	});
+
+	$('.menu-button').on('click', function() {
+		$('body').toggleClass('open-menu');
+	});
 });

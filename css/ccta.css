@@ -179,6 +179,7 @@ header li a {
 	text-align: center;
 	padding:1.5em;
 	background-color:#2E7FB6;
+	min-height: 2em;
 }
 header li a:hover,
 header li a:focus,
@@ -206,13 +207,68 @@ header .sub-menu li:first-child {
 }
 header .sub-menu li a {
 	background-color:#24638d;
+	min-height: 0;
+}
+header .menu-button {
+	display: none;
+	position: absolute;
+	top: 0.5em;
+	right: 0.5em;
+	font-size: 1.6em;
+	color: #fff;
+	background-color: #2E7FB6;
+	padding: 1em;
+	font-weight: bold;
+}
+@media( max-width: 61.56em ) { /* 985 / 16 */
+	header nav {
+		position:absolute;
+		bottom:0;
+		right:0;
+		width:100%;
+	}
+	header .sub-menu {
+		display: block;
+		position: static;
+		max-width: none;
+	}
+	header li {
+		display:block;
+	}
+	header li:first-child {
+		visibility: visible;
+		width:auto;
+	}
+	header li a {
+		min-height:0;
+	}
+	header .menu-button {
+		display:block;
+	}
+	.open-menu header nav {
+		bottom:auto;
+	}
+}
+@media( max-width: 48.75em ) { /* 780 / 16 */
+	header .logo {
+		width:20%;
+	}
+	.no-featured-image header .logo {
+		position:static;
+		float:left;
+	}
+}
+@media( min-width: 75em ) {
+	header li a {
+		min-height: 0;
+	}
 }
 
 
 .featured-image {
 	position:relative;
 }
-.no-featured-image {
+.no-featured-image .featured-image {
 	height:10.3em;
 }
 .featured-image img {
@@ -229,12 +285,22 @@ header .sub-menu li a {
 	min-width: 66.5%;
 	font-weight: bold;
 }
+@media( max-width: 56.875em ) { /* 910 / 16 */
+	.page-title {
+		position:static;
+		text-align: center;
+	}
+	.no-featured-image {
+		height:auto;
+	}
+}
 
 main {
 	background-color:#eee;
 	padding:5em 0;
 	overflow:auto;
 	height:100%;
+	clear:both;
 }
 article {
 	padding:5em 3.5em;
@@ -263,6 +329,12 @@ article li {
 }
 article img {
 	margin-bottom:1.5em;
+}
+
+@media( max-width: 61.56em ) { /* 985 / 16 */
+	article {
+		max-width:80%;
+	}
 }
 
 /* Taxonomy Term */
@@ -308,6 +380,13 @@ article img {
 	font-size: 1.6em;
 	font-weight: 700;
 	text-align: center;
+}
+@media( max-width: 42.5em ) { /* 680 / 16 */
+	.program .information,
+	.program .description {
+		float:none;
+		width:auto;
+	}
 }
 
 /* Media */
@@ -392,7 +471,7 @@ article img {
 /* Footer */
 footer {
 	background-color: #F04447;
-	padding:5em 0;
+	padding:5em 2.5em;
 	overflow: auto;
 	height:100%;
 }
@@ -407,7 +486,7 @@ footer p {
 footer .ccta-address {
 	float:right;
 	text-align: right;
-	width:25%;
+	width:50%;
 }
 footer a {
 	color:#fff;

@@ -41,6 +41,8 @@
 	);
 	?>
 	<nav><?php wp_nav_menu( $args ); ?></nav>
+
+	<a href="#" class="menu-button">Menu</a>
 </header>
 
 <?php

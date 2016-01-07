@@ -10,8 +10,6 @@
             if( $gizmos = get_gizmos('CCTAHomepageBoxes') ) {
                 echo '<section class="homepage-boxes">';
                 render_gizmo('CCTAHomepageBoxes');
-                render_gizmo('CCTAHomepageBoxes');
-                render_gizmo('CCTAHomepageBoxes');
                 echo '</section>';
             }
         }

@@ -337,6 +337,49 @@ article img {
 	}
 }
 
+/* Homepage Boxes */
+.homepage-boxes {
+	max-width:73%;
+	margin:0 auto 3.5em;
+
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+.homepage-box {
+	background-color: #fff;
+    padding: 1em 4em;
+    width: 32%;
+    margin: 1.5em 0;
+    box-sizing: border-box;
+	text-align: center;
+}
+.homepage-box .blurb p {
+	font-size:1.3em;
+	line-height: 1.5;
+}
+
+@media( max-width: 61.56em ) { /* 985 / 16 */
+	.homepage-box {
+		width: 49%;
+		margin: 0.6666em 0;
+	}
+}
+
+@media( max-width: 37.5em ) { /* 985 / 16 */
+	.homepage-box {
+		width:100%;
+	}
+}
+
 /* Taxonomy Term */
 .term-description {
 	padding-top:1em;
